@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Subify — Synced Lyrics Overlay for macOS</title>
-    <meta name="description" content="A minimal HUD glassmorphism overlay displaying live synced lyrics for Spotify & Apple Music on macOS with dual-language translation and system hotkeys.">
+    <meta name="description" content="A minimal HUD glassmorphism overlay displaying live synced lyrics for Spotify & Apple Music on macOS with system hotkeys.">
 
     <!-- Fonts: Inter & JetBrains Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -550,7 +550,7 @@
             </div>
 
             <h1>Synced Lyrics.<br><span>Floating on macOS.</span></h1>
-            <p>Subify is a minimal HUD glassmorphism overlay for Spotify & Apple Music. Zero-latency synced lyrics with dual-language live translation.</p>
+            <p>Subify is a minimal HUD glassmorphism overlay for Spotify & Apple Music. Zero-latency synced lyrics with full transcript drawer and system shortcuts.</p>
 
             <div class="hero-actions">
                 <a href="/Subify.zip" download class="btn-primary">
@@ -584,7 +584,7 @@
                         <span class="grip-dot"></span><span class="grip-dot"></span>
                     </div>
                     <div id="line-primary" class="lyric-main">I said, ooh, I'm blinded by the lights</div>
-                    <div id="line-sub" class="lyric-sub">💬 Translated English Subtitle</div>
+                    <div id="line-sub" class="lyric-sub">No, I can't sleep until I feel your touch</div>
                     <div class="floater-close">✕</div>
                 </div>
             </div>
@@ -611,9 +611,9 @@
                 </div>
 
                 <div class="bento-card">
-                    <div class="bento-num">02 / TRANSLATION ENGINE</div>
-                    <h3>Dual-Language Translation</h3>
-                    <p>Listen to K-Pop, Anime OSTs, and Spanish tracks with real-time English translations rendered right underneath.</p>
+                    <div class="bento-num">02 / REAL-TIME SYNC</div>
+                    <h3>Zero-Latency Sync Engine</h3>
+                    <p>High-precision millisecond LRC lyric parsing synchronized to real-time player position with offset controls.</p>
                 </div>
 
                 <div class="bento-card">
@@ -680,9 +680,9 @@
 
     <script>
         const lyricSequence = [
-            { main: "I said, ooh, I'm blinded by the lights", sub: "💬 Translated English Subtitle" },
-            { main: "No, I can't sleep until I feel your touch", sub: "💬 No puedo dormir hasta sentir tu 요개" },
-            { main: "I'm running out of time", sub: "💬 我没时间了" }
+            { main: "I said, ooh, I'm blinded by the lights", sub: "No, I can't sleep until I feel your touch" },
+            { main: "No, I can't sleep until I feel your touch", sub: "I'm running out of time" },
+            { main: "I'm running out of time", sub: "Cause I can see the sun light up the sky" }
         ];
 
         let index = 0;
