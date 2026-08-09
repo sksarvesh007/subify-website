@@ -106,7 +106,7 @@
         .nav-meta {
             display: flex;
             align-items: center;
-            gap: 20px;
+            gap: 16px;
         }
 
         .ver-badge {
@@ -117,6 +117,17 @@
             border: 1px solid var(--border);
             padding: 4px 10px;
             border-radius: 99px;
+        }
+
+        .nav-contact {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: color 0.2s ease;
+        }
+
+        .nav-contact:hover {
+            color: #FFFFFF;
         }
 
         .btn-nav {
@@ -284,7 +295,7 @@
             background: rgba(255, 255, 255, 0.25);
         }
 
-        /* Showcase Stage with Real Video Demo */
+        /* Showcase Stage with Real Demo Video */
         .showcase {
             max-width: 960px;
             margin: 0 auto 120px;
@@ -398,6 +409,57 @@
             line-height: 1.6;
         }
 
+        /* Contact Me Section */
+        .contact-section {
+            max-width: 900px;
+            margin: 0 auto 120px;
+            padding: 36px 40px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .contact-info h3 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #FFFFFF;
+            margin-bottom: 4px;
+        }
+
+        .contact-info p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .contact-links {
+            display: flex;
+            gap: 16px;
+        }
+
+        .contact-link {
+            color: var(--text-main);
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border);
+            padding: 8px 16px;
+            border-radius: 99px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .contact-link:hover {
+            border-color: rgba(255, 255, 255, 0.3);
+            background: var(--surface-hover);
+        }
+
         /* Shortcuts Matrix */
         .shortcut-section {
             max-width: 1000px;
@@ -466,8 +528,10 @@
         }
 
         @media (max-width: 768px) {
-            .bento-grid, .shortcut-grid, .install-grid {
+            .bento-grid, .shortcut-grid, .install-grid, .contact-section {
                 grid-template-columns: 1fr;
+                flex-direction: column;
+                align-items: flex-start;
             }
             .stage-window {
                 height: 320px;
@@ -493,6 +557,7 @@
             </a>
             <div class="nav-meta">
                 <span class="ver-badge">v3.4.1 • macOS</span>
+                <a href="#contact" class="nav-contact">Contact</a>
                 <a href="/Subify.zip" download="Subify.zip" class="btn-nav">Download Free</a>
             </div>
         </nav>
@@ -622,10 +687,30 @@
             </div>
         </section>
 
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="contact-info">
+                <h3>Built by Sarvesh Khodwe</h3>
+                <p>Have feedback, bug reports, or feature ideas? Get in touch directly.</p>
+            </div>
+            <div class="contact-links">
+                <a href="mailto:khodwesarvesh007@gmail.com" class="contact-link">
+                    ✉️ Email
+                </a>
+                <a href="https://x.com/SKSarvesh007" target="_blank" class="contact-link">
+                    𝕏 Twitter
+                </a>
+                <a href="https://www.linkedin.com/in/sarvesh-khodwe/" target="_blank" class="contact-link">
+                    💼 LinkedIn
+                </a>
+            </div>
+        </section>
+
         <!-- Footer -->
         <footer>
             <div>© 2026 Subify App. Free for macOS.</div>
-            <div>
+            <div style="display: flex; gap: 16px;">
+                <a href="mailto:khodwesarvesh007@gmail.com">Contact</a>
                 <a href="/Subify.zip" download="Subify.zip">Direct Download (.zip)</a>
             </div>
         </footer>
