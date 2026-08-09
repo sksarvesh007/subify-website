@@ -213,30 +213,75 @@
             box-shadow: 0 0 45px rgba(255, 255, 255, 0.35);
         }
 
-        /* First Time Install Guide Box (Positioned Above Showcase) */
+        /* Two Installation Methods Section */
         .install-box {
-            max-width: 860px;
+            max-width: 900px;
             margin: 0 auto 80px;
-            padding: 28px 36px;
+            padding: 0 24px;
+        }
+
+        .install-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .install-card {
             background: var(--surface);
             border: 1px solid var(--border);
             border-radius: 18px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
+            padding: 28px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
-        .step h4 {
-            font-size: 0.95rem;
+        .install-card h3 {
+            font-size: 1.05rem;
             font-weight: 700;
             color: #FFFFFF;
-            margin-bottom: 4px;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
 
-        .step p {
+        .install-card p {
             font-size: 0.88rem;
             color: var(--text-muted);
             line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        .cmd-snippet {
+            font-family: var(--font-mono);
+            font-size: 0.78rem;
+            background: rgba(0, 0, 0, 0.7);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 12px 14px;
+            color: #10B981;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            word-break: break-all;
+        }
+
+        .btn-copy {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            color: #FFFFFF;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .btn-copy:hover {
+            background: rgba(255, 255, 255, 0.25);
         }
 
         /* Interactive Showcase Stage */
@@ -497,7 +542,7 @@
         }
 
         @media (max-width: 768px) {
-            .bento-grid, .shortcut-grid, .install-box {
+            .bento-grid, .shortcut-grid, .install-grid {
                 grid-template-columns: 1fr;
             }
             .hero h1 {
@@ -543,15 +588,33 @@
             </div>
         </section>
 
-        <!-- First Time Install Guide Box (POSITIONED ABOVE SHOWCASE) -->
+        <!-- Two Installation Methods Section -->
         <section class="install-box">
-            <div class="step">
-                <h4>1. Download & Move to Apps</h4>
-                <p>Unzip <code>Subify.zip</code> and drag <code>Subify.app</code> into your macOS <b>Applications</b> folder.</p>
-            </div>
-            <div class="step">
-                <h4>2. First-Time Launch</h4>
-                <p>Right-click (Control-click) <code>Subify.app</code> ➔ Select <b>Open</b> ➔ Click <b>Open</b> on the prompt.</p>
+            <div class="install-grid">
+
+                <!-- Method 1: Direct Download -->
+                <div class="install-card">
+                    <div>
+                        <h3>⚡ Method 1: Direct App Download</h3>
+                        <p>Unzip <code>Subify.zip</code>, drag <code>Subify.app</code> to Applications, and right-click Open on first launch.</p>
+                    </div>
+                    <div>
+                        <a href="/Subify.zip" download="Subify.zip" class="btn-nav" style="display: inline-block; text-align: center; width: 100%;">Download .zip</a>
+                    </div>
+                </div>
+
+                <!-- Method 2: Terminal One-Liner (Auto Installs, Bypasses Gatekeeper & Launches) -->
+                <div class="install-card">
+                    <div>
+                        <h3>💻 Method 2: One-Line Terminal Command</h3>
+                        <p>Installs Subify directly into <code>/Applications</code>, bypasses Gatekeeper prompts, and launches immediately!</p>
+                    </div>
+                    <div class="cmd-snippet">
+                        <span id="cmd-text">curl -fsSL https://subify-website.vercel.app/install.sh | bash</span>
+                        <button class="btn-copy" onclick="copyCommand()">Copy</button>
+                    </div>
+                </div>
+
             </div>
         </section>
 
@@ -658,8 +721,16 @@
     </div>
 
     <script>
+        function copyCommand() {
+            const cmd = document.getElementById('cmd-text').innerText;
+            navigator.clipboard.writeText(cmd);
+            const btn = document.querySelector('.btn-copy');
+            btn.innerText = 'Copied!';
+            setTimeout(() => { btn.innerText = 'Copy'; }, 2000);
+        }
+
         const lyricSequence = [
-            { main: "I said, ooh, I'm blinded by the lights", sub: "No, I can't sleep until I feel your touch" },
+            { main: "I said, ooh, I'm blinded by the lights", sub: "No, I can'sleep until I feel your touch" },
             { main: "No, I can't sleep until I feel your touch", sub: "I'm running out of time" },
             { main: "I'm running out of time", sub: "Cause I can see the sun light up the sky" }
         ];
