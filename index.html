@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Subify — Live Synced Spotify & Apple Music Lyrics Overlay for macOS</title>
-    <meta name="description" content="Subify is the ultimate macOS HUD glassmorphism overlay displaying live synced lyrics for Spotify & Apple Music with dual-language translation, full lyrics drawer, and system hotkeys.">
+    <title>Subify — Free Synced Spotify & Apple Music Lyrics Overlay for macOS</title>
+    <meta name="description" content="Subify is a free, beautiful macOS HUD glassmorphism overlay displaying live synced lyrics for Spotify & Apple Music with dual-language translation, full lyrics drawer, and system hotkeys.">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -295,7 +295,6 @@
             color: #ffffff;
             margin-bottom: 4px;
             text-shadow: 0 2px 10px rgba(0,0,0,0.5);
-
         }
 
         .lyric-translation {
@@ -450,78 +449,58 @@
             box-shadow: 0 2px 4px rgba(0,0,0,0.4);
         }
 
-        /* Pricing Section */
-        .pricing-section {
-            max-width: 1000px;
+        /* Free Guarantee Section */
+        .free-section {
+            max-width: 900px;
             margin: 0 auto 120px;
-            padding: 0 24px;
-        }
-
-        .pricing-cards {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 32px;
-            margin-top: 50px;
-        }
-
-        .pricing-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border-glass);
+            padding: 50px 36px;
+            background: linear-gradient(135deg, rgba(0, 242, 254, 0.08) 0%, rgba(127, 0, 255, 0.08) 100%);
+            border: 1px solid var(--accent-cyan);
             border-radius: var(--radius-card);
-            padding: 44px 36px;
-            backdrop-filter: blur(12px);
-            position: relative;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0, 242, 254, 0.12);
         }
 
-        .pricing-card.featured {
-            background: linear-gradient(180deg, rgba(79, 172, 254, 0.08) 0%, rgba(127, 0, 255, 0.04) 100%);
-            border-color: var(--accent-cyan);
-            box-shadow: 0 20px 60px rgba(0, 242, 254, 0.15);
-        }
-
-        .popular-badge {
-            position: absolute;
-            top: -14px;
-            right: 28px;
-            background: linear-gradient(135deg, var(--accent-cyan) 0%, var(--accent-blue) 100%);
-            color: #000;
+        .free-section h2 {
+            font-size: 2.4rem;
             font-weight: 800;
-            font-size: 0.75rem;
-            padding: 4px 14px;
-            border-radius: var(--radius-pill);
-            text-transform: uppercase;
+            margin-bottom: 14px;
         }
 
-        .price {
-            font-size: 3rem;
-            font-weight: 800;
-            margin: 20px 0;
-        }
-
-        .price span {
-            font-size: 1rem;
+        .free-section p {
+            font-size: 1.1rem;
             color: var(--text-secondary);
-            font-weight: 400;
+            max-width: 650px;
+            margin: 0 auto 30px;
         }
 
-        .pricing-features {
-            list-style: none;
-            margin: 28px 0;
+        /* First Time Guide */
+        .guide-box {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--border-glass);
+            border-radius: 16px;
+            padding: 24px;
+            margin-top: 30px;
+            text-align: left;
             display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        .pricing-features li {
-            display: flex;
+            gap: 20px;
             align-items: center;
-            gap: 10px;
-            color: var(--text-secondary);
-            font-size: 0.95rem;
         }
 
-        .pricing-features i {
+        .guide-step {
+            flex: 1;
+        }
+
+        .guide-step h4 {
             color: var(--accent-cyan);
+            font-size: 1.05rem;
+            margin-bottom: 6px;
+        }
+
+        .guide-step p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin: 0;
         }
 
         /* Footer */
@@ -552,27 +531,27 @@
             <li><a href="#features">Features</a></li>
             <li><a href="#demo">Live Demo</a></li>
             <li><a href="#hotkeys">Shortcuts</a></li>
-            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#guide">Installation</a></li>
         </ul>
         <a href="/Subify.zip" download class="btn-download">
-            <i class="fa-solid fa-apple"></i> Download Subify v3.0
+            <i class="fa-solid fa-download"></i> Free Download (.zip)
         </a>
     </header>
 
     <!-- Hero -->
     <section class="hero">
         <div class="badge-pill">
-            <i class="fa-solid fa-sparkles"></i> Subify v3.0 Ultra Commercial Release
+            <i class="fa-solid fa-gift"></i> 100% Free Application for macOS
         </div>
         <h1>Sing along to <span>Spotify & Apple Music</span> on macOS.</h1>
-        <p>The world's most advanced HUD glassmorphism subtitle overlay. Zero-latency synced lyrics, dual-language translation, and click-to-seek playback.</p>
+        <p>The world's most advanced HUD glassmorphism subtitle overlay. Zero-latency synced lyrics, dual-language live translation, and interactive click-to-seek.</p>
 
         <div class="hero-actions">
             <a href="/Subify.zip" download class="btn-download" style="font-size: 1.1rem; padding: 16px 36px;">
-                <i class="fa-solid fa-download"></i> Download for macOS (.zip)
+                <i class="fa-solid fa-apple"></i> Download Subify Free (.zip)
             </a>
-            <a href="#pricing" class="btn-secondary">
-                Get Lifetime License
+            <a href="#features" class="btn-secondary">
+                Explore Features
             </a>
         </div>
     </section>
@@ -587,7 +566,7 @@
                     <span class="mac-dot dot-green"></span>
                 </div>
                 <div>♪ Playing on Spotify: The Weeknd — Blinding Lights</div>
-                <div>Subify 3.0</div>
+                <div>Subify Free</div>
             </div>
 
             <!-- Floater -->
@@ -694,45 +673,24 @@
         </div>
     </section>
 
-    <!-- Pricing -->
-    <section id="pricing" class="pricing-section">
-        <div class="section-header">
-            <h2>Lifetime Commercial Pricing</h2>
-            <p>One-time payment. No monthly subscriptions.</p>
-        </div>
+    <!-- Free & Installation Guide -->
+    <section id="guide" class="free-section">
+        <h2>100% Free Forever</h2>
+        <p>No ads, no subscriptions, and no paywalls. Built for music lovers on macOS.</p>
 
-        <div class="pricing-cards">
-            <div class="pricing-card">
-                <h3>Personal License</h3>
-                <p style="color: var(--text-secondary); margin-top: 4px;">Single Mac activation</p>
-                <div class="price">$9.99 <span>/ lifetime</span></div>
+        <a href="/Subify.zip" download class="btn-download" style="font-size: 1.1rem; padding: 16px 36px;">
+            <i class="fa-solid fa-download"></i> Download Subify Free (.zip)
+        </a>
 
-                <ul class="pricing-features">
-                    <li><i class="fa-solid fa-check"></i> Spotify & Apple Music Support</li>
-                    <li><i class="fa-solid fa-check"></i> 5 Glassmorphism Themes</li>
-                    <li><i class="fa-solid fa-check"></i> Dual-Language Live Translation</li>
-                    <li><i class="fa-solid fa-check"></i> System-Wide Global Hotkeys</li>
-                    <li><i class="fa-solid fa-check"></i> Unlimited Free Updates</li>
-                </ul>
-
-                <a href="/Subify.zip" download class="btn-secondary" style="display: block; text-align: center;">Download Free Trial</a>
+        <!-- Installation hint -->
+        <div class="guide-box">
+            <div class="guide-step">
+                <h4>Step 1: Download & Unzip</h4>
+                <p>Unzip <code>Subify.zip</code> and move <code>Subify.app</code> to your <b>Applications</b> folder.</p>
             </div>
-
-            <div class="pricing-card featured">
-                <div class="popular-badge">Most Popular</div>
-                <h3>Family & Pro License</h3>
-                <p style="color: var(--text-secondary); margin-top: 4px;">Up to 5 Macs in your household</p>
-                <div class="price">$19.99 <span>/ lifetime</span></div>
-
-                <ul class="pricing-features">
-                    <li><i class="fa-solid fa-check"></i> Everything in Personal License</li>
-                    <li><i class="fa-solid fa-check"></i> 5 Mac Family Activation</li>
-                    <li><i class="fa-solid fa-check"></i> Priority Sync Engine Updates</li>
-                    <li><i class="fa-solid fa-check"></i> Full Lyrics Drawer Click-to-Seek</li>
-                    <li><i class="fa-solid fa-check"></i> VIP Customer Support</li>
-                </ul>
-
-                <a href="/Subify.zip" download class="btn-download" style="display: block; text-align: center;">Get Pro License</a>
+            <div class="guide-step">
+                <h4>Step 2: First Time Opening</h4>
+                <p>Right-click (Control-click) <code>Subify.app</code> ➔ Select <b>Open</b> ➔ Click <b>Open</b>.</p>
             </div>
         </div>
     </section>
@@ -741,7 +699,7 @@
     <footer>
         <div style="display: flex; align-items: center; gap: 10px;">
             <img src="/app_icon.png" width="24" height="24" style="border-radius: 6px;">
-            <span>© 2026 Subify App. All rights reserved.</span>
+            <span>© 2026 Subify App. Free & Open Source.</span>
         </div>
         <div>macOS 13.0+ (Apple Silicon & Intel)</div>
     </footer>
